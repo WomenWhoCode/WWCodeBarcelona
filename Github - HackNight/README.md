@@ -1,5 +1,5 @@
 # Github 101
-📚🙈
+👩‍💻👾🤓
 Pull Request, Flow Control, Merge conflicts, commits, stashes, repositories, ... If any or all of this words sound like Chinese to you come to our HackNight @Typeform on April 24th in Barcelona.
 
 ## Pre-Requisites:
@@ -18,6 +18,8 @@ Pull Request, Flow Control, Merge conflicts, commits, stashes, repositories, ...
 - What is a fork?
 - Pull Requests (how to open and review one)
 - Git Flow
+
+🙂🎟🤖
 
 ## Learn ahead/after 🤓 :
 - [How to write good github commit messages]()
