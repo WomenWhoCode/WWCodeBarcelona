@@ -1,10 +1,8 @@
 # Repository & Open Source
-
-
 ## `git clone`
 This command clones a repository into a new directory. Creates remote-tracking branches for each branch in the cloned repository.
 
-Most of the times this is the first step to setup your local environment. 
+Most of the times this is the first step to setup your local environment.
 
 ## `git fork`
 This command allows you to copy a repository to your space without afecting the original project.
