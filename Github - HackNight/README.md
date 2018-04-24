@@ -12,6 +12,7 @@ Pull Request, Flow Control, Merge conflicts, commits, stashes, repositories, ...
   `clone, merge, push, pull fetch`
 - Git branches
 - Git Rebase
+  - `git rebase` vs `git merge`
 - Merge conflicts
 - What to do when everything goes wrong
 - What is a fork?
@@ -35,4 +36,4 @@ If you have any questions or need any help you can reach out to:
 Women Who Code Barcelona: [barcelona@womenwhocode.com](mailto:barcelona@womenwhocode.com)
 
 Berta Devant: [@bertadevant](https://github.com/bertadevant)
-Helena He: [@mikanchu](https://twitter.com/mikanchu)
+Elena He: [@mikanchu](https://twitter.com/mikanchu)
