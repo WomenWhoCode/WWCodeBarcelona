@@ -26,17 +26,25 @@ There are 2 main ways to integrate changes from one branch to another: `merge` a
 
 ### Merging
 
-Merging records the commits prioritizing the time.
+Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. The order is decided based on the timestamp on the commit.
 More information at [git](https://git-scm.com/docs/git-merge)
 
 ### Rebasing
 
-This command allows to take all the changes that were commited on one branch and replay them on another one.
+This command moves all the registered commits of the current branch to the tip of the proposed branch. Rebasing re-writes the project history by creating brand new commits for each commit in the proposed branch.
+For example:
+
+- We forked a branch `working_branch` from `master` and we added commits "A" and "B".
+- Meanwhile `master` incorporated commits "X" and "Z"
+- After rebasing `master` into `working_branch`, the log for the second will be "X"<--"Z"<--"A"<--"B"<-- HEAD
+
 More information at [git](https://git-scm.com/docs/git-rebase)
 
 ### Merge vs Rebase
 
-Merge's point of view os that your repository's commit history is a record of what actually happened while rebase's point of view is that the commit history is the story of how your project was made.
+![Merge vs Rebase graphics](../assets/merge-rebase.png "Merge vs Rebase schema")
+
+Merge's point of view is that your repository's commit history is a record of what actually happened while rebase's point of view is that the commit history is the story of how your project was made.
 
 It’s up to you to decide which one is best for your particular situation.
 
