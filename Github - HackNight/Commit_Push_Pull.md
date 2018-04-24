@@ -34,7 +34,7 @@ Before you Commit some changes you need to decide what changes you want to commi
 
 ### Status
 
-`git status` will show you every file that has been modified and is being tracked by the repository. There are some files that are not tracked sometimes. Read more about [untracked files here](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository).
+`git status` will show you every file that has been modified and is being tracked by the repository. There are some files that are not tracked sometimes, status will also show untracked files unless they're ignored by `.gitignore`. Read more about [untracked files here](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository).
 
 ### Add files
 

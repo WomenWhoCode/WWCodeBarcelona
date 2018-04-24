@@ -14,8 +14,13 @@ Before you start working on an assignment you pull the latest from master and us
 
 ## New Branch
 
-`git checkout -b "branchName"`
+  - `git checkout -b "branchName"` Creates a new branch and takes you directly to its HEAD
+  - `git branch "branchName"` Creates a new branch without moving you from current HEAD, you will need to use `git checkout` to start working on the branch
 
 ## Existing branch
 
 `git checkout "branchName"`
+
+## Delete Branch
+
+`git branch -d/-D "branchName"`
