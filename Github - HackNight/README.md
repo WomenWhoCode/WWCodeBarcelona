@@ -1,4 +1,4 @@
-# Github 101
+# BErta is awesome
 
 Pull Request, Flow Control, Merge conflicts, commits, stashes, repositories, ... If any or all of this words sound like Chinese to you come to our HackNight @Typeform on April 24th in Barcelona.
 
