@@ -19,6 +19,8 @@ Pull Request, Flow Control, Merge conflicts, commits, stashes, repositories, ...
 - Pull Requests (how to open and review one)
 - Git Flow
 
+🙂🎟🤖
+
 ## Learn ahead/after 🤓 :
 - [How to write good github commit messages]()
 
