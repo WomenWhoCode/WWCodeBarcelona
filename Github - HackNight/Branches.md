@@ -19,3 +19,25 @@ Before you start working on an assignment you pull the latest from master and us
 ## Existing branch
 
 `git checkout "branchName"`
+
+## Integrating changes from one branch to another
+
+There are 2 main ways to integrate changes from one branch to another: `merge` and `rebase`
+
+### Merging
+
+Merging records the commits prioritizing the time.
+More information at [git](https://git-scm.com/docs/git-merge)
+
+### Rebasing
+
+This command allows to take all the changes that were commited on one branch and replay them on another one.
+More information at [git](https://git-scm.com/docs/git-rebase)
+
+### Merge vs Rebase
+
+Merge's point of view os that your repository's commit history is a record of what actually happened while rebase's point of view is that the commit history is the story of how your project was made.
+
+It’s up to you to decide which one is best for your particular situation.
+
+In general the way to get the best of both worlds is to rebase local changes you’ve made but haven’t shared yet before you push them in order to clean up your story, but never rebase anything you’ve pushed somewhere.
