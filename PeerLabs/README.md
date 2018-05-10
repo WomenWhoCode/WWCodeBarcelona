@@ -13,3 +13,4 @@ Bring a laptop and some code to work on 👩‍💻
 - [JavaScript30.com](JavaScript30.com)
 - [Theodinproject.com](Theodinproject.com)
 - [Freecodecamp.com](Freecodecamp.com)
+- [Google Codelabs] (codelabs.developers.google.com)
