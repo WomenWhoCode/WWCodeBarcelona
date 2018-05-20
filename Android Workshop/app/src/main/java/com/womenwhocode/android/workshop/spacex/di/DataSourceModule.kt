@@ -34,7 +34,6 @@ fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit = Retrofit
         .build()
 
 fun provideGson(): Gson = GsonBuilder()
-        .setDateFormat("")
         .create()
 
 fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder()

@@ -10,8 +10,8 @@ import retrofit2.Response
 /**
  * Created by Rocio Ortega on 19/05/2018.
  */
-class LaunchCloudDataSource(val launchApi: LaunchApi) {
-    fun getLaunchs(onSuccess: (List<Launch>) -> Unit, onError: (Throwable?) -> Unit) {
+class LaunchCloudDataSource(private val launchApi: LaunchApi) {
+    fun getLaunches(onSuccess: (List<Launch>) -> Unit, onError: (Throwable?) -> Unit) {
 
         launchApi.getLaunches().enqueue(object : Callback<List<LaunchDataApi>> {
             override fun onFailure(call: Call<List<LaunchDataApi>>?, t: Throwable?) {

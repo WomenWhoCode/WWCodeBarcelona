@@ -13,27 +13,14 @@ data class Launch(
         val rocket: Rocket,
         val site: Site,
         val image: String,
-        val smallImage: String
-) {
-    override fun toString(): String {
-        return "Launch(flightNumber=$flightNumber, missionName='$missionName', launchYear='$launchYear', launchDateUnix=$launchDateUnix, launchSuccess=$launchSuccess, details='$details', rocket=$rocket, site=$site, image='$image', smallImage='$smallImage')"
-    }
-}
+        val smallImage: String)
 
 data class Rocket(
         val id: String,
         val name: String,
-        val type: String) {
-    override fun toString(): String {
-        return "Rocket(id='$id', name='$name', type='$type')"
-    }
-}
+        val type: String)
 
 data class Site(
         val id: String,
         val name: String,
-        val nameLong: String) {
-    override fun toString(): String {
-        return "Site(id='$id', name='$name', nameLong='$nameLong')"
-    }
-}
+        val nameLong: String)
