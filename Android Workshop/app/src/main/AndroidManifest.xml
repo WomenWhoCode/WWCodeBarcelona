@@ -1,4 +1,4 @@
-<manifest package="com.womenwhocode.spacex"
+<manifest package="com.womenwhocode.android.workshop.spacex"
           xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
