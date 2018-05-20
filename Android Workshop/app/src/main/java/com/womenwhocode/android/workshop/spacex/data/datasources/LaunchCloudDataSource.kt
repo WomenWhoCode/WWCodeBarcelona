@@ -20,10 +20,9 @@ class LaunchCloudDataSource(private val launchApi: LaunchApi) {
 
             override fun onResponse(call: Call<List<LaunchDataApi>>?, response: Response<List<LaunchDataApi>>?) {
                 response?.let {
-                    if (it.isSuccessful) {
-                        onSuccess.invoke(response.body().map { toDomain(it) })
-                    } else {
-                        onError.invoke(null)
+                    when {
+                        it.isSuccessful -> onSuccess.invoke(response.body().map { toDomain(it) })
+                        else -> onError.invoke(null)
                     }
                 } ?: run { onError.invoke(null) }
             }
