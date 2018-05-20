@@ -1,8 +1,8 @@
-package com.womenwhocode.spacex.presentation.launches
+package com.womenwhocode.android.workshop.spacex.presentation.launches
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.womenwhocode.spacex.R
+import com.womenwhocode.android.workshop.spacex.R
 
 /**
  * Created by Rocio Ortega on 19/05/2018.

@@ -1,4 +1,4 @@
-package com.womanwhocode.spacex
+package com.womenwhocode.android.workshop.spacex
 
 import org.junit.Test
 
