@@ -1,4 +1,4 @@
-package com.womenwhocode.spacex.data.model
+package com.womenwhocode.android.workshop.spacex.data.model
 
 import com.google.gson.annotations.SerializedName
 

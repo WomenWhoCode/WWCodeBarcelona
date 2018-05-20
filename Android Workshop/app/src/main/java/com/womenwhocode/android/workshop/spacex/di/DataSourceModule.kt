@@ -1,9 +1,9 @@
-package com.womenwhocode.spacex.di
+package com.womenwhocode.android.workshop.spacex.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.womenwhocode.spacex.data.datasources.LaunchCloudDataSource
-import com.womenwhocode.spacex.data.services.LaunchApi
+import com.womenwhocode.android.workshop.spacex.data.datasources.LaunchCloudDataSource
+import com.womenwhocode.android.workshop.spacex.data.services.LaunchApi
 import okhttp3.OkHttpClient
 import org.koin.dsl.module.applicationContext
 import retrofit2.Retrofit

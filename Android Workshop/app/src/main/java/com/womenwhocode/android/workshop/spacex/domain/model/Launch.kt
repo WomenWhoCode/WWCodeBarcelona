@@ -1,4 +1,4 @@
-package com.womenwhocode.spacex.domain.model
+package com.womenwhocode.android.workshop.spacex.domain.model
 
 /**
  * Created by Rocio Ortega on 19/05/2018.

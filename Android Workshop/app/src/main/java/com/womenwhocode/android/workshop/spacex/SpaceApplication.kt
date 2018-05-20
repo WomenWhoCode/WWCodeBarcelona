@@ -1,7 +1,7 @@
-package com.womenwhocode.spacex
+package com.womenwhocode.android.workshop.spacex
 
 import android.app.Application
-import com.womenwhocode.spacex.di.myAppModules
+import com.womenwhocode.android.workshop.spacex.di.myAppModules
 import org.koin.android.ext.android.startKoin
 
 /**

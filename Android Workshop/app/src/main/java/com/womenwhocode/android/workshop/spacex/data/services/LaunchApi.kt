@@ -1,6 +1,6 @@
-package com.womenwhocode.spacex.data.services
+package com.womenwhocode.android.workshop.spacex.data.services
 
-import com.womenwhocode.spacex.data.model.LaunchDataApi
+import com.womenwhocode.android.workshop.spacex.data.model.LaunchDataApi
 import retrofit2.Call
 import retrofit2.http.GET
 

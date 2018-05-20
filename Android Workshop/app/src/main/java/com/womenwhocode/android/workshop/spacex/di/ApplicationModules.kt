@@ -1,4 +1,4 @@
-package com.womenwhocode.spacex.di
+package com.womenwhocode.android.workshop.spacex.di
 
 import org.koin.dsl.module.Module
 import org.koin.dsl.module.applicationContext

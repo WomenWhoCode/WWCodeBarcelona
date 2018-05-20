@@ -1,11 +1,11 @@
-package com.womenwhocode.spacex.data.datasources
+package com.womenwhocode.android.workshop.spacex.data.datasources
 
-import com.womenwhocode.spacex.data.model.LaunchDataApi
-import com.womenwhocode.spacex.data.model.RocketDataApi
-import com.womenwhocode.spacex.data.model.SiteDataApi
-import com.womenwhocode.spacex.domain.model.Launch
-import com.womenwhocode.spacex.domain.model.Rocket
-import com.womenwhocode.spacex.domain.model.Site
+import com.womenwhocode.android.workshop.spacex.data.model.LaunchDataApi
+import com.womenwhocode.android.workshop.spacex.data.model.RocketDataApi
+import com.womenwhocode.android.workshop.spacex.data.model.SiteDataApi
+import com.womenwhocode.android.workshop.spacex.domain.model.Launch
+import com.womenwhocode.android.workshop.spacex.domain.model.Rocket
+import com.womenwhocode.android.workshop.spacex.domain.model.Site
 
 /**
  * Created by Rocio Ortega on 19/05/2018.
