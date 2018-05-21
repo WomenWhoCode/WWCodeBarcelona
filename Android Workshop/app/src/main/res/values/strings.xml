@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SpaceX Android Workshop</string>
+    <string name="rocket_info">Rocket info</string>
+    <string name="launch_year">Launch year:</string>
+    <string name="rocket_name">Rocket Name:</string>
+    <string name="rocket_type">Rocket type:</string>
+    <string name="site_info">Site info</string>
 </resources>
