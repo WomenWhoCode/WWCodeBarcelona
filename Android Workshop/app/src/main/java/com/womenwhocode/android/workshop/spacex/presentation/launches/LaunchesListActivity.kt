@@ -3,6 +3,7 @@ package com.womenwhocode.android.workshop.spacex.presentation.launches
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import com.womenwhocode.android.workshop.spacex.R
 import com.womenwhocode.android.workshop.spacex.domain.model.Launch
 import kotlinx.android.synthetic.main.activity_launches_list.*
@@ -19,15 +20,17 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launches_list)
         presenter.view = this
-        launches_rv.layoutManager = GridLayoutManager(this, 2)
-        launches_rv.adapter = SpaceXAdapter();
+        launches_rv.layoutManager = GridLayoutManager(this, 2) //TODO: extract and configure according to device?
+        //launches_rv.adapter = SpaceXAdapter();
+        presenter.loadLaunches()
     }
 
     override fun displayLaunches(launches: List<Launch>?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Log.i("LaunchesListPresenter", launches?.toString())
+        //TODO: display in adapter
     }
 
     override fun showLoading() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //TODO("not implemented")
     }
 }

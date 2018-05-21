@@ -20,7 +20,7 @@ class LaunchesListPresenter(val useCase: GetLaunchesUseCase) {
     }
 
     private fun doOnSuccess(launches: List<Launch>?) {
-        Log.i("LaunchesListPresenter", launches?.toString())
-        view?.displayLaunches(launches);
+        //TODO: use ViewLaunches Object
+        view?.displayLaunches(launches)
     }
 }

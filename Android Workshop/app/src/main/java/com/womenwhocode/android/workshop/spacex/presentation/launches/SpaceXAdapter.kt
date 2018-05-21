@@ -7,16 +7,16 @@ import android.view.ViewGroup
 class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpaceXViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        TODO("not implemented")
     }
 
     override fun onBindViewHolder(holder: SpaceXViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        TODO("not implemented")
     }
 
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        TODO("not implemented")
     }
 }
 
