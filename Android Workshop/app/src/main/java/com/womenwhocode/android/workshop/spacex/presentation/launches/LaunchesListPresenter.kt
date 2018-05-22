@@ -20,7 +20,22 @@ class LaunchesListPresenter(val useCase: GetLaunchesUseCase) {
     }
 
     private fun doOnSuccess(launches: List<Launch>?) {
-        //TODO: use ViewLaunches Object
-        view?.displayLaunches(launches)
+        view?.displayLaunches(toViewLaunches(launches))
+    }
+
+    private fun toViewLaunches(launches: List<Launch>?): List<ViewLaunch> {
+        return launches?.map { toViewLaunch(it) }?: ArrayList()
+    }
+
+    private fun toViewLaunch(launch: Launch): ViewLaunch {
+        return ViewLaunch(
+                launch.missionName,
+                launch.launchYear,
+                launch.launchSuccess,
+                launch.details,
+                launch.rocket.name,
+                launch.site.name,
+                launch.image,
+                launch.smallImage)
     }
 }
