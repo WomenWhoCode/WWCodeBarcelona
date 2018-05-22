@@ -10,19 +10,19 @@ In order for us to help you as soon as possible, indicate what is your operating
  
 ### Step 1: Install Java
      
-* Open a Terminal:
- - Windows: go to the search (at the bottom left in Windows 10) and type `cmd`. 
+#### Verify if java is installed:
+You will need to open a Terminal.
+  - Windows: go to the search (at the bottom left in Windows 10) and type `cmd`. 
 You will see a program in the list, select it.
- - Linux: ctr + alt + T or look for the app Terminal
- - Mac: look for the app Terminal (often inside tools??) 
+  - Linux: ctr + alt + T or look for the app Terminal
+  - Mac: look for the app Terminal (often inside tools??) 
 * Check if you have java installed, type in the command line (Terminal):
  
-      `java -version` or `which java`
+ `java -version` or `which java`
       
-      If you get a message displaying a path or a version of java, you can skip to step 2 
-      because it means that you already have java installed.
+If you get a message displaying a path or a version of java, you can skip to step 2 because it means that you already have java installed.
    
-* Installation 
+#### Installation 
  - Linux (Ubuntu or Mint):
         
         ```        
