@@ -55,7 +55,7 @@ If you get a message displaying a path or a version of java, you can skip to ste
     
 * Check if you have it already setup, in the command line type:
  
- * Linux and Mac:
+  * Linux and Mac:
     ```
         echo $JAVA_HOME
     ```
@@ -65,7 +65,7 @@ If you get a message displaying a path or a version of java, you can skip to ste
      ```    
     If you get a file path, for example `/usr/lib/jvm/java-8-oracle`, then you can go directly to step 3.
  
-  * Setup
+* Setup
    - Windows:
    
         - Start > Control Panel > System > Advanced System Settings > Environment Variables System Variables > New
