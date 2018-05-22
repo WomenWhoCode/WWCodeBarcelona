@@ -15,7 +15,7 @@ You will need to open a Terminal.
   - Windows: go to the search (at the bottom left in Windows 10) and type `cmd`. 
 You will see a program in the list, select it.
   - Linux: ctr + alt + T or look for the app Terminal
-  - Mac: look for the app Terminal (often inside tools??) 
+  - Mac: look for the app Terminal
 Check if you have `java` installed, type in the command line (Terminal):
  
  `java -version` or `which java`
