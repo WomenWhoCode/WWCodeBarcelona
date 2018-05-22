@@ -16,7 +16,7 @@ You will need to open a Terminal.
 You will see a program in the list, select it.
   - Linux: ctr + alt + T or look for the app Terminal
   - Mac: look for the app Terminal (often inside tools??) 
-* Check if you have java installed, type in the command line (Terminal):
+Check if you have `java` installed, type in the command line (Terminal):
  
  `java -version` or `which java`
       
