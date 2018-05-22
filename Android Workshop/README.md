@@ -127,6 +127,10 @@ If you get a message displaying a path or a version of java, you can skip to ste
   Chose the project using the path you set, in my case, `src/WWCodeBarcelona/Android Workshop`.
   Press OK.
   The project will be imported and you are all set!
+
+
+### Step 6: Run the project
+If you are curious after the project finishes building and downloading dependencies you can look for the green run button and try running it. You will be asked to chose the emulator to use or create one if there are none.
    
 ## Exercises
 ... WILL BE ADDED SOON....
