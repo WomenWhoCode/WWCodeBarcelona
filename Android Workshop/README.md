@@ -53,7 +53,7 @@ In order for us to help you as soon as possible, indicate what is your operating
             * Once the download completes, run the installer and follow the instructions.
       
       
-    2. Setup JAVA_HOME
+   1. Setup JAVA_HOME
     
  * Check if you have it already setup, in the command line type:
  
@@ -91,14 +91,14 @@ In order for us to help you as soon as possible, indicate what is your operating
         - Open a new Terminal and check with `echo $JAVA_HOME`
    
         
-    3. Install Android Studio
+   1. Install Android Studio
     
    Android Studio is the IDE that we will use to develop Android apps. 
     
    Follow [these](https://developer.android.com/studio/install) instructions and if you have __Linux 64 bit do not forget the extra libraries__.
    To make it simple, just choose the standard installation (selected by default), you will get all the tools needed for this workshop.
    
-    4. Install git
+    1. Install git
     
    We use git as a source control tool to commit all the code we write to github. You will need it to clone the project and get all the sources on your machine.
    Check if you have git installed, in the command line type:
@@ -114,7 +114,7 @@ In order for us to help you as soon as possible, indicate what is your operating
    sudo apt-get install git-core
    ```
    
-    5. Clone the project
+   1. Clone the project
     
   Choose a folder where you will put your code. I use a folder called `src` but it is totally up to you.
   Navigate to that folder in the command line and clone the project.
