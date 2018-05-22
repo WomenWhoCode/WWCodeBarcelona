@@ -8,7 +8,7 @@ In order for us to help you as soon as possible, indicate what is your operating
 
 ## Installation instructions
  
-    1. Install Java
+   1. Install Java
 
      
    * Open a Terminal:
@@ -98,7 +98,7 @@ In order for us to help you as soon as possible, indicate what is your operating
    Follow [these](https://developer.android.com/studio/install) instructions and if you have __Linux 64 bit do not forget the extra libraries__.
    To make it simple, just choose the standard installation (selected by default), you will get all the tools needed for this workshop.
    
-    1. Install git
+   1. Install git
     
    We use git as a source control tool to commit all the code we write to github. You will need it to clone the project and get all the sources on your machine.
    Check if you have git installed, in the command line type:
