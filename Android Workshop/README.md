@@ -10,7 +10,7 @@ In order for us to help you as soon as possible, indicate what is your operating
  
 ### Step 1: Install Java
      
-#### Verify if java is installed:
+#### Java installation verification
 You will need to open a Terminal.
   - Windows: go to the search (at the bottom left in Windows 10) and type `cmd`. 
 You will see a program in the list, select it.
@@ -22,7 +22,7 @@ You will see a program in the list, select it.
       
 If you get a message displaying a path or a version of java, you can skip to step 2 because it means that you already have java installed.
    
-#### Installation 
+#### Java installation 
 * Linux (Ubuntu or Mint):
         
      ```        
