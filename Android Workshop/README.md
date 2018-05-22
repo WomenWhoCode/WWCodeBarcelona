@@ -23,9 +23,9 @@ You will see a program in the list, select it.
 If you get a message displaying a path or a version of java, you can skip to step 2 because it means that you already have java installed.
    
 #### Installation 
- - Linux (Ubuntu or Mint):
+* Linux (Ubuntu or Mint):
         
-        ```        
+     ```        
             sudo add-apt-repository ppa:webupd8team/java
          
             sudo apt-get update
@@ -34,13 +34,12 @@ If you get a message displaying a path or a version of java, you can skip to ste
          
             sudo apt-get install oracle-java8-set-default       
          
-        ```
- - Mac and Windows:     
-            * Go to the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
-            * On the first box, tick the __Accept License Agreement__ checkbox and select the right build for 
-                your operating system. 
-                - Mac: lucky you, there is only one in the list to chose from.
-                - Windows: 
+    ```
+* Mac and Windows:     
+  * Go to the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+  * On the first box, tick the __Accept License Agreement__ checkbox and select the right build for your operating system. 
+    * Mac: lucky you, there is only one in the list to chose from.
+    * Windows: 
                     You will need to find out if you have a 64 or 32 bits system. If you have windows 10 or 8 type 
                     ```
                     control /name Microsoft.System
@@ -49,7 +48,7 @@ If you get a message displaying a path or a version of java, you can skip to ste
                     For older versions, just open the `Control Panel` manually.
                     There should be a system section and it will say __64 bits system__ or __32 bits system__. 
                     Select the right file to download either 64bits or 32 bits.
-            * Once the download completes, run the installer and follow the instructions.
+ * Once the download completes, run the installer and follow the instructions.
       
       
 ### Step 2: Setup JAVA_HOME
