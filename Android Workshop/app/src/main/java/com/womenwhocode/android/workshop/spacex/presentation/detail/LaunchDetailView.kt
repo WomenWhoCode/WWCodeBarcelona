@@ -1,12 +1,11 @@
 package com.womenwhocode.android.workshop.spacex.presentation.detail
 
-import com.womenwhocode.android.workshop.spacex.domain.model.Launch
 
 /**
  *  :3
  */
 
-interface LaunchDetailView{
+interface LaunchDetailView {
 
-    fun displayLaunchDetail(launch: Launch)
+    fun displayLaunchDetail(missionName: String, launchYear: String, launchSuccess: Boolean, details: String, rocketName: String, siteName: String, image: String)
 }

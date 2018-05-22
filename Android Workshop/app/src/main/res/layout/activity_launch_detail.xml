@@ -38,10 +38,29 @@
                 android:text="@string/launch_year" />
 
             <TextView
-                android:id="@+id/launchYear"
+                android:id="@+id/yearOfLaunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="12983" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="10dp"
+                android:text="@string/mission_success" />
+
+            <TextView
+                android:id="@+id/successOfLaunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="True" />
         </LinearLayout>
 
         <TextView
@@ -71,6 +90,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/rocketDetailInfoContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -80,13 +100,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingEnd="10dp"
-                android:text="@string/rocket_type" />
+                android:text="@string/rocket_detail" />
 
             <TextView
-                android:id="@+id/rocketTypeLaunch"
+                android:id="@+id/rocketDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="12983" />
+                tools:text="details" />
         </LinearLayout>
 
         <TextView

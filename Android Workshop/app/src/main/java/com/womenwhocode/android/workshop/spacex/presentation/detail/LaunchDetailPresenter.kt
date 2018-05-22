@@ -1,7 +1,5 @@
 package com.womenwhocode.android.workshop.spacex.presentation.detail
 
-import com.womenwhocode.android.workshop.spacex.domain.model.Launch
-
 /**
  *  :3
  */
@@ -10,8 +8,8 @@ class LaunchDetailPresenter {
 
     var view: LaunchDetailActivity? = null
 
-    fun loadLaunchDetail(launch: Launch) {
-        view?.displayLaunchDetail(launch)
+    fun loadLaunchDetail(missionName: String, launchYear: String, launchSuccess: Boolean, details: String, rocketName: String, siteName: String, image: String) {
+        view?.displayLaunchDetail(missionName,launchYear,launchSuccess,details,rocketName,siteName,image)
     }
 
 }
