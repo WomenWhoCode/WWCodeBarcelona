@@ -36,13 +36,9 @@ class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
         holder.locationTv.text = launches[position].siteName
     }
 
-    override fun getItemCount(): Int {
-        return launches.size
-    }
+    override fun getItemCount(): Int = launches.size
 
-    fun getItem(position: Int): ViewLaunch {
-        return launches[position]
-    }
+    fun getItem(position: Int): ViewLaunch = launches[position]
 }
 
 class SpaceXViewHolder(view: View) : RecyclerView.ViewHolder(view) {
