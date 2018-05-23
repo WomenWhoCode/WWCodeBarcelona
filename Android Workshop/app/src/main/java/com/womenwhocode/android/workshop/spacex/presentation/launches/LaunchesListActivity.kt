@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.util.Log
 import com.womenwhocode.android.workshop.spacex.R
 import kotlinx.android.synthetic.main.activity_launches_list.*
@@ -24,7 +25,7 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
         setContentView(R.layout.activity_launches_list)
         presenter.view = this
         this.adapter = SpaceXAdapter()
-        launchesRv.layoutManager = GridLayoutManager(this, 2)
+        launchesRv.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL, false)
         launchesRv.adapter = adapter
         launchesSrl.setOnRefreshListener {
             presenter.loadLaunches()

@@ -1,8 +1,13 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import com.womenwhocode.android.workshop.spacex.R
+import kotlinx.android.synthetic.main.launches_list_item.view.*
 
 class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
 
@@ -17,18 +22,20 @@ class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpaceXViewHolder {
-        TODO("not implemented")
+        return SpaceXViewHolder(LayoutInflater.from(parent.context)
+                .inflate(R.layout.launches_list_item, parent, false))
     }
 
     override fun onBindViewHolder(holder: SpaceXViewHolder, position: Int) {
-        TODO("not implemented")
+        holder.nameTv.text = launches[position].missionName
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented")
+        return launches.size
     }
 }
 
 class SpaceXViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
+    val smallIv: ImageView = view.smallIv
+    val nameTv: TextView = view.nameTv
 }
