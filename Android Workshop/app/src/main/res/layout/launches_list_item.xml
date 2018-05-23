@@ -9,18 +9,31 @@
               android:layout_height="wrap_content">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:scaleType="centerCrop"
             app:srcCompat="@mipmap/ic_launcher"
             android:id="@+id/smallIv"/>
 
     <TextView
-            android:text="TextView"
             android:gravity="center"
-            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:id="@+id/nameTv"/>
+    <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yearTv"/>
+    <TextView
+            android:gravity="center"
+            android:drawablePadding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_stat_location_city"
+            android:id="@+id/locationTv"/>
 </LinearLayout>
