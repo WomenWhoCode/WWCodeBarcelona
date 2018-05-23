@@ -39,6 +39,10 @@ class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
     override fun getItemCount(): Int {
         return launches.size
     }
+
+    fun getItem(position: Int): ViewLaunch {
+        return launches[position]
+    }
 }
 
 class SpaceXViewHolder(view: View) : RecyclerView.ViewHolder(view) {
