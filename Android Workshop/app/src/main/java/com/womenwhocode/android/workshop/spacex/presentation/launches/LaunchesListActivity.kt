@@ -1,6 +1,8 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
 import android.os.Bundle
+import android.support.design.widget.Snackbar
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.util.Log
@@ -22,8 +24,11 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
         setContentView(R.layout.activity_launches_list)
         presenter.view = this
         this.adapter = SpaceXAdapter()
-        launches_rv.layoutManager = GridLayoutManager(this, 2) //TODO: extract and configure according to device?
-        launches_rv.adapter = adapter
+        launchesRv.layoutManager = GridLayoutManager(this, 2)
+        launchesRv.adapter = adapter
+        launchesSrl.setOnRefreshListener {
+            presenter.loadLaunches()
+        }
         presenter.loadLaunches()
     }
 
@@ -33,6 +38,15 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
     }
 
     override fun showLoading() {
-        //TODO("not implemented")
+        launchesSrl.isRefreshing = true
+    }
+
+    override fun hideLoading() {
+        launchesSrl.isRefreshing = false
+    }
+
+    override fun showErrorGettingLaunches() {
+        Snackbar.make(rootLayout, getString(R.string.list_get_launches_error), Snackbar.LENGTH_LONG)
+                .show()
     }
 }

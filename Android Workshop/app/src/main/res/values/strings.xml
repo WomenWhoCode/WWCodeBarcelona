@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpaceX Android Workshop</string>
+    <string name="list_get_launches_error">Error getting launches, please try again</string>
 </resources>
