@@ -5,5 +5,6 @@
     <string name="rocket_name">Rocket Name:</string>
     <string name="rocket_detail">Details:</string>
     <string name="site_info">Site info</string>
-    <string name="mission_success">Launch success:</string>
+    <string name="mission_success">Launch:</string>
+    <string name="list_get_launches_error">Error getting launches, please try again</string>
 </resources>

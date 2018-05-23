@@ -2,18 +2,27 @@ package com.womenwhocode.android.workshop.spacex.presentation.detail
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.squareup.picasso.Picasso
 import com.womenwhocode.android.workshop.spacex.R
-import com.womenwhocode.android.workshop.spacex.domain.model.Launch
+import com.womenwhocode.android.workshop.spacex.presentation.launches.GlideApp
+import com.womenwhocode.android.workshop.spacex.presentation.launches.ViewLaunch
 import kotlinx.android.synthetic.main.activity_launch_detail.*
 import org.koin.android.ext.android.get
 
 /**
  *  :3
  */
+
+private const val LAUNCH_MISSION_NAME: String = "launch.mision.name"
+private const val LAUNCH_YEAR: String = "launch.year"
+private const val LAUNCH_SUCCESS: String = "launch.success"
+private const val LAUNCH_DETAILS: String = "launch.detail"
+private const val LAUNCH_ROCKET: String = "launch.rocket"
+private const val LAUNCH_SITE: String = "launch.site"
+private const val LAUNCH_IMAGE: String = "launch.image"
 
 class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
 
@@ -44,36 +53,36 @@ class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
         yearOfLaunch.text = launchYear
         rocketNameLaunch.text = rocketName
         siteInfoLaunch.text = siteName
-        successOfLaunch.text= launchSuccess.toString()
+        val color = if (launchSuccess) Color.GREEN else Color.RED
+        successOfLaunch.text = if (launchSuccess) "Success :D" else "Not success :("
+        successOfLaunch.setTextColor(color)
         if (details.isEmpty()) {
             rocketDetailInfoContainer.visibility = View.GONE
-        }else{
-            rocketDetail.text=details
+        } else {
+            rocketDetail.text = details
         }
-        Picasso.get().load(image).into(launchImg)
+        GlideApp.with(this)
+                .load(image)
+                .into(launchImg)
+                .waitForLayout()
+
     }
 
 
     companion object {
 
-        const val LAUNCH_MISSION_NAME: String = "launch.mision.name"
-        const val LAUNCH_YEAR: String = "launch.year"
-        const val LAUNCH_SUCCESS: String = "launch.success"
-        const val LAUNCH_DETAILS: String = "launch.detail"
-        const val LAUNCH_ROCKET: String = "launch.rocket"
-        const val LAUNCH_SITE: String = "launch.site"
-        const val LAUNCH_IMAGE: String = "launch.image"
-
-        fun newIntent(context: Context, launch: Launch): Intent {
+        fun newIntent(context: Context, launch: ViewLaunch?): Intent {
             val intent = Intent(context, LaunchDetailActivity::class.java)
+            launch?.let {
+                intent.putExtra(LAUNCH_MISSION_NAME, it.missionName)
+                intent.putExtra(LAUNCH_YEAR, it.launchYear)
+                intent.putExtra(LAUNCH_SUCCESS, it.launchSuccess)
+                intent.putExtra(LAUNCH_DETAILS, it.details)
+                intent.putExtra(LAUNCH_ROCKET, it.rocketName)
+                intent.putExtra(LAUNCH_SITE, it.siteName)
+                intent.putExtra(LAUNCH_IMAGE, it.image)
+            }
 
-            intent.putExtra(LAUNCH_MISSION_NAME, launch.missionName)
-            intent.putExtra(LAUNCH_YEAR, launch.launchYear)
-            intent.putExtra(LAUNCH_SUCCESS, launch.launchSuccess)
-            intent.putExtra(LAUNCH_DETAILS, launch.details)
-            intent.putExtra(LAUNCH_ROCKET, launch.rocket.name)
-            intent.putExtra(LAUNCH_SITE, launch.site.name)
-            intent.putExtra(LAUNCH_IMAGE, launch.image)
             return intent
         }
     }
