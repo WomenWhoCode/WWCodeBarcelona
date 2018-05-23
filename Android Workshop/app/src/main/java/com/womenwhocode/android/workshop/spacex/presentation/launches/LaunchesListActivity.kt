@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import com.womenwhocode.android.workshop.spacex.R
-import com.womenwhocode.android.workshop.spacex.domain.model.Launch
 import kotlinx.android.synthetic.main.activity_launches_list.*
 import org.koin.android.ext.android.inject
 

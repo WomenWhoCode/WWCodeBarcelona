@@ -7,7 +7,7 @@ import com.womenwhocode.android.workshop.spacex.domain.usecases.GetLaunchesUseCa
 
 class LaunchesListPresenter(private val useCase: GetLaunchesUseCase) {
 
-    var view: LaunchesListActivity? = null
+    var view: LaunchesListView? = null
 
     fun loadLaunches() {
         view?.showLoading()
@@ -16,7 +16,6 @@ class LaunchesListPresenter(private val useCase: GetLaunchesUseCase) {
     }
 
     private fun doOnGetLaunchesError(throwable: Throwable?) {
-        //TODO: show error to user
         Log.e("LaunchesListPresenter", "error loading launches", throwable)
         view?.hideLoading()
         view?.showErrorGettingLaunches()
@@ -28,7 +27,7 @@ class LaunchesListPresenter(private val useCase: GetLaunchesUseCase) {
     }
 
     private fun toViewLaunches(launches: List<Launch>?): List<ViewLaunch> {
-        return launches?.map { toViewLaunch(it) } ?: ArrayList()
+        return launches?.map { toViewLaunch(it) } ?: emptyList()
     }
 
     private fun toViewLaunch(launch: Launch): ViewLaunch {
