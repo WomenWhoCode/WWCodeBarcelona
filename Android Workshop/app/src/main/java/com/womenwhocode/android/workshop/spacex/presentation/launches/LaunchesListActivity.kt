@@ -25,13 +25,24 @@ class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       ///"Add a view to the Activity. setContentView(.....)"
-
+        //"Add a view to the Activity. setContentView(.....)"
+        setContentView(R.layout.activity_launches_list)
         //Init presenter
         presenter.view=this
 
         //"Configurate the list"
-
+        this.adapter = SpaceXAdapter()
+        launchesRv.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL, false)
+        launchesRv.adapter = adapter
+        launchesRv.addOnItemClickListener(object: OnItemClickListener {
+            override fun onItemClicked(position: Int, view: View) {
+                var viewLaunch: ViewLaunch? = adapter?.getItem(position)
+                startActivity(LaunchDetailActivity.newIntent(view.context, viewLaunch))
+            }
+        })
+        launchesSrl.setOnRefreshListener {
+            presenter.loadLaunches()
+        }
         //"Tell the presenter to load the launches"
         presenter.loadLaunches()
     }
@@ -39,6 +50,7 @@ class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
     override fun displayLaunches(launches: List<ViewLaunch>?) {
         Log.i("LaunchesListPresenter", launches?.toString())
         //"Add the items to the adapter"
+        adapter?.setLaunches(launches)
     }
 
     override fun showLoading() {
@@ -51,5 +63,7 @@ class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
 
     override fun showErrorGettingLaunches() {
        ///"Show a snackbar showing the error"
+        Snackbar.make(rootLayout, getString(R.string.list_get_launches_error), Snackbar.LENGTH_LONG)
+                .show()
     }
 }
