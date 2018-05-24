@@ -7,4 +7,6 @@
     <string name="site_info">Site info</string>
     <string name="mission_success">Launch:</string>
     <string name="list_get_launches_error">Error getting launches, please try again</string>
+    <string name="launch_success_text">Success :D</string>
+    <string name="launch_failure_text">Failure :(</string>
 </resources>

@@ -54,7 +54,7 @@ class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
         rocketNameLaunch.text = rocketName
         siteInfoLaunch.text = siteName
         val color = if (launchSuccess) Color.GREEN else Color.RED
-        successOfLaunch.text = if (launchSuccess) "Success :D" else "Not success :("
+        successOfLaunch.text = if (launchSuccess) getString(R.string.launch_success_text) else getString(R.string.launch_failure_text)
         successOfLaunch.setTextColor(color)
         if (details.isEmpty()) {
             rocketDetailInfoContainer.visibility = View.GONE
