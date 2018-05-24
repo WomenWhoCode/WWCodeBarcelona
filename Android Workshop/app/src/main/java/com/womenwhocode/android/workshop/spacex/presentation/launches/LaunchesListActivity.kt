@@ -1,5 +1,6 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
+import android.app.Activity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import com.womenwhocode.android.workshop.spacex.R
+import com.womenwhocode.android.workshop.spacex.presentation.detail.LaunchDetailActivity
 import kotlinx.android.synthetic.main.activity_launches_list.*
 import org.koin.android.ext.android.inject
 
@@ -30,7 +32,7 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
         launchesRv.addOnItemClickListener(object: OnItemClickListener {
             override fun onItemClicked(position: Int, view: View) {
                 var viewLaunch: ViewLaunch? = adapter?.getItem(position)
-                //TODO open detail activity
+                startActivity(LaunchDetailActivity.newIntent(view.context, viewLaunch))
             }
         })
         launchesSrl.setOnRefreshListener {
