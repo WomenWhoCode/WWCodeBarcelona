@@ -1,11 +1,13 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
 
+import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import com.womenwhocode.android.workshop.spacex.R
 import kotlinx.android.synthetic.main.launches_list_item.view.*
 
@@ -31,7 +33,12 @@ class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: SpaceXViewHolder, position: Int) {
-        //Fill every item of the view with the data current item displayed
+        GlideApp.with(holder.nameTv.context).load(launches[position].smallImage).into(holder.smallIv)
+        holder.nameTv.text = launches[position].missionName
+        holder.yearTv.text = launches[position].launchYear
+        val color = if (launches[position].launchSuccess) Color.GREEN else Color.RED
+        holder.yearTv.setTextColor(color)
+        holder.locationTv.text = launches[position].siteName
     }
 
     override fun getItemCount(): Int = launches.size
@@ -41,5 +48,7 @@ class SpaceXAdapter : RecyclerView.Adapter<SpaceXViewHolder>() {
 
 class SpaceXViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val smallIv: ImageView = view.smallIv
-    // bind vars with the view elements
+    val nameTv: TextView = view.nameTv
+    val yearTv: TextView = view.yearTv
+    val locationTv: TextView = view.locationTv
 }
