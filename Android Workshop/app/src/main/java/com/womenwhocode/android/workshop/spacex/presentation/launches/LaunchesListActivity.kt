@@ -15,47 +15,41 @@ import org.koin.android.ext.android.inject
 
 /**
  * Created by Rocio Ortega on 19/05/2018.
+ * Class used to see a list of Launch
  */
-class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
-
+class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
+    //Presented injected in the Activity
     private val presenter: LaunchesListPresenter by inject()
-
+    //Adapter used for displaying items in the list
     private var adapter: SpaceXAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_launches_list)
-        presenter.view = this
-        this.adapter = SpaceXAdapter()
-        launchesRv.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL, false)
-        launchesRv.adapter = adapter
-        launchesRv.addOnItemClickListener(object: OnItemClickListener {
-            override fun onItemClicked(position: Int, view: View) {
-                var viewLaunch: ViewLaunch? = adapter?.getItem(position)
-                startActivity(LaunchDetailActivity.newIntent(view.context, viewLaunch))
-            }
-        })
-        launchesSrl.setOnRefreshListener {
-            presenter.loadLaunches()
-        }
+       ///"Add a view to the Activity. setContentView(.....)"
+
+        //Init presenter
+        presenter.view=this
+
+        //"Configurate the list"
+
+        //"Tell the presenter to load the launches"
         presenter.loadLaunches()
     }
 
     override fun displayLaunches(launches: List<ViewLaunch>?) {
         Log.i("LaunchesListPresenter", launches?.toString())
-        adapter?.setLaunches(launches)
+        //"Add the items to the adapter"
     }
 
     override fun showLoading() {
-        launchesSrl.isRefreshing = true
+       //Show loading
     }
 
     override fun hideLoading() {
-        launchesSrl.isRefreshing = false
+      // Hide loading
     }
 
     override fun showErrorGettingLaunches() {
-        Snackbar.make(rootLayout, getString(R.string.list_get_launches_error), Snackbar.LENGTH_LONG)
-                .show()
+       ///"Show a snackbar showing the error"
     }
 }
