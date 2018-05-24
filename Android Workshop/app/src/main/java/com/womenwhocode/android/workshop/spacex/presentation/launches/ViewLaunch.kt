@@ -1,5 +1,7 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
+
+//Data used in the view
 data class ViewLaunch(
         val missionName: String,
         val launchYear: String,

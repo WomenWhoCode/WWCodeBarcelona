@@ -3,6 +3,8 @@ package com.womenwhocode.android.workshop.spacex.presentation.launches
 import android.support.v7.widget.RecyclerView
 import android.view.View
 
+
+//Extension with Interfaces of the Adapter
 interface OnItemClickListener {
     fun onItemClicked(position: Int, view: View)
 }
