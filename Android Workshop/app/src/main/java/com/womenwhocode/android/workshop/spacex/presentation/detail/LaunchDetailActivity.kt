@@ -37,8 +37,8 @@ class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
 
     }
 
-    //Use this factory method to create a new instance of
-    // this fragment using the provided parameters.
+   //Use this factory method for create a new instance of
+   // this activity using the provided parameters.
     companion object {
 
         fun newIntent(context: Context, launch: ViewLaunch?): Intent {
