@@ -15,12 +15,12 @@ import org.koin.android.ext.android.inject
 
 /**
  * Created by Rocio Ortega on 19/05/2018.
- * Class used to see a list of Launch
+ * Class used to see a list of Launches
  */
 class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
-    //Presented injected in the Activity
+    //Presenter injected in the Activity
     private val presenter: LaunchesListPresenter by inject()
-    //Adapter used for displaying items in the list
+    //Adapter used for displaying items in the RecyclerView
     private var adapter: SpaceXAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +54,11 @@ class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
     }
 
     override fun showLoading() {
-       //Show loading
+       //show 'loading' while the list is being loaded from the network
+
+       // Network calls take time, we do not want the user to wonder if our app
+       // is broken so we need to show some UI to inform the user to wait
+
     }
 
     override fun hideLoading() {
@@ -62,7 +66,7 @@ class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
     }
 
     override fun showErrorGettingLaunches() {
-       ///"Show a snackbar showing the error"
+       ///"Show a snackbar containing an error message"
         Snackbar.make(rootLayout, getString(R.string.list_get_launches_error), Snackbar.LENGTH_LONG)
                 .show()
     }

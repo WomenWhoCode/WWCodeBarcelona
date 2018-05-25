@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 
 
-//Extension with Interfaces of the Adapter
+//Extension with Interfaces for the RecyclerView click listener
 interface OnItemClickListener {
     fun onItemClicked(position: Int, view: View)
 }
