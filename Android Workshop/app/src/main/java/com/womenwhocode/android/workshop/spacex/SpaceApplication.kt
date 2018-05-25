@@ -10,6 +10,8 @@ import org.koin.android.ext.android.startKoin
 class SpaceApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        //Init the Dependence Injection with Koin!! Check their web if you are curious is dead easy DI
+        //Check their website https://insert-koin.io/docs/1.0/getting-started/android/ if you need help
         startKoin(this, myAppModules())
     }
 }

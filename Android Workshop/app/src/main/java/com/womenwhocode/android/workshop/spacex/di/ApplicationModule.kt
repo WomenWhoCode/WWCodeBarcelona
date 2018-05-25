@@ -6,7 +6,7 @@ import org.koin.dsl.module.applicationContext
 /**
  * Created by Rocio Ortega on 19/05/2018.
  */
-fun myAppModules() = listOf(dataSourceModule, domainModule, myModule)
+fun myAppModules() = listOf(dataSourceModule, domainModule, viewModule, myModule)
 
 val myModule: Module = applicationContext {
 
