@@ -11,6 +11,7 @@ import com.womenwhocode.android.workshop.spacex.presentation.launches.GlideApp
 import com.womenwhocode.android.workshop.spacex.presentation.launches.ViewLaunch
 import kotlinx.android.synthetic.main.activity_launch_detail.*
 import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
 
 /**
  * Activity used to see the details of a rocket launch
