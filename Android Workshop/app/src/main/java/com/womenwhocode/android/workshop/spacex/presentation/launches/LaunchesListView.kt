@@ -1,6 +1,6 @@
 package com.womenwhocode.android.workshop.spacex.presentation.launches
 
-//Interface used to comunicate the presenter with the view
+//Interface (contract) that the view must implement. The presenter uses these methods to tell the view what to do.
 interface LaunchesListView {
 
     fun displayLaunches(launches: List<ViewLaunch>?)

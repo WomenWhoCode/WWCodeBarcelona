@@ -17,5 +17,5 @@
         android:scaleType="centerCrop"
         app:srcCompat="@mipmap/ic_launcher" />
 
-    <!-- Add  here the textviews to show the remain data -->
+    <!-- Add  here the textviews to show the remaining data -->
 </LinearLayout>
