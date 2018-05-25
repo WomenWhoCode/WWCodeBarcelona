@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_launch_detail.*
 import org.koin.android.ext.android.get
 
 /**
- *  :3
+ * Activity used to see the details of a rocket launch
  */
 
 private const val LAUNCH_MISSION_NAME: String = "launch.mision.name"
@@ -26,11 +26,11 @@ private const val LAUNCH_IMAGE: String = "launch.image"
 
 class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
 
+    private val presenter: LaunchDetailPresenter by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch_detail)
-        val presenter = get<LaunchDetailPresenter>()
 
         title = "Detail"
         presenter.view = this
@@ -68,7 +68,8 @@ class LaunchDetailActivity : AppCompatActivity(), LaunchDetailView {
 
     }
 
-
+   //Use this factory method for create a new instance of
+   // this activity using the provided parameters.
     companion object {
 
         fun newIntent(context: Context, launch: ViewLaunch?): Intent {

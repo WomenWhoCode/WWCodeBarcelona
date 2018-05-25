@@ -15,17 +15,22 @@ import org.koin.android.ext.android.inject
 
 /**
  * Created by Rocio Ortega on 19/05/2018.
+ * Class used to see a list of Launches
  */
-class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
-
+class LaunchesListActivity : AppCompatActivity(), LaunchesListView {
+    //Presenter injected in the Activity
     private val presenter: LaunchesListPresenter by inject()
-
+    //Adapter used for displaying items in the RecyclerView
     private var adapter: SpaceXAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //"Add a view to the Activity. setContentView(.....)"
         setContentView(R.layout.activity_launches_list)
-        presenter.view = this
+        //Init presenter
+        presenter.view=this
+
+        //"Configurate the list"
         this.adapter = SpaceXAdapter()
         launchesRv.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL, false)
         launchesRv.adapter = adapter
@@ -38,16 +43,21 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
         launchesSrl.setOnRefreshListener {
             presenter.loadLaunches()
         }
+        //"Tell the presenter to load the launches"
         presenter.loadLaunches()
     }
 
     override fun displayLaunches(launches: List<ViewLaunch>?) {
         Log.i("LaunchesListPresenter", launches?.toString())
+        //"Add the items to the adapter"
         adapter?.setLaunches(launches)
     }
 
     override fun showLoading() {
         launchesSrl.isRefreshing = true
+        // Network calls take time, we do not want the user to wonder if our app
+       // is broken so we need to show some UI to inform the user to wait
+
     }
 
     override fun hideLoading() {
@@ -55,6 +65,7 @@ class LaunchesListActivity: AppCompatActivity(), LaunchesListView {
     }
 
     override fun showErrorGettingLaunches() {
+       ///"Show a snackbar containing an error message"
         Snackbar.make(rootLayout, getString(R.string.list_get_launches_error), Snackbar.LENGTH_LONG)
                 .show()
     }
