@@ -133,4 +133,5 @@ If you get a message displaying a path or a version of java, you can skip to ste
 If you are curious after the project finishes building and downloading dependencies you can look for the green run button and try running it. You will be asked to chose the emulator to use or create one if there are none.
    
 ## Exercises
-... WILL BE ADDED SOON....
+Slides!
+https://docs.google.com/presentation/d/1wTEBYAfC9iSZK8lkOD8VT79QhHk0-gG_ajr3cDO_Ks0/edit?usp=sharing
