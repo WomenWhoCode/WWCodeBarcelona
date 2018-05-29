@@ -13,4 +13,6 @@ Bring a laptop and some code to work on 👩‍💻
 - [JavaScript30.com](JavaScript30.com)
 - [Theodinproject.com](Theodinproject.com)
 - [Freecodecamp.com](Freecodecamp.com)
-- [Google Codelabs] (codelabs.developers.google.com)
+- [CodeLabs](codelabs.developers.google.com)
+- [Devs.to](https://dev.to/howtocodejs/javascript-variables-the-beginners-guide-5eid)
+- [Coder Dojo](https://coderdojo.com/resources/)
